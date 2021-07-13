@@ -935,11 +935,10 @@ if text == 'ukkk' and Dev(msg) then
 if not DevSoFi(msg) then 
 local bl = '◉ مرحبا بك في سورس روجين قم بأختيار ماتريده من الازار في الاسفل↑↓'
 local keyboard = {
-{'  قسم مطورين السورس'},
-{'اسعارالتنصيب'},
-{'اسعار السورسات باكمل الحقوق'},
-{'قسم الالعاب'},
+{'قسم مبرمجين السورس'},
 {'قسم المميزات'},
+{'قسم الالعاب'},
+{'العوده'},
 }
 send_inline_key(msg.chat_id_,bl,keyboard)
 end 
@@ -952,11 +951,10 @@ if not DevSoFi(msg) then
 if text == '/start' or text == 'العوده'  then  
 local bl = '◉ مرحبا بك في سورس روجين قم بأختيار ماتريده من الازار في الاسفل↑↓'
 local keyboard = {
-{'  قسم مطورين السورس'},
-{'اسعارالتنصيب'},
-{'اسعار السورسات باكمل الحقوق'},
-{'قسم الالعاب'},
+{'قسم مبرمجين السورس'},
 {'قسم المميزات'},
+{'قسم الالعاب'},
+{'العوده'},
 }
 send_inline_key(msg.chat_id_,bl,keyboard)
 end
@@ -988,46 +986,24 @@ tdcli_function ({ ID = "GetUserProfilePhotos", user_id_ = bot_id, offset_ = 0, l
 end
 end
 
-if text == "اسعارالتنصيب" then
-if not DevSoFi(msg) then
-local Text = [[
- ◉ سعر التنصيب علي سورس روجين سعر التنصيب العادي 25ج تواصل مع المطورين لتنصيب❤️.
-]]
-keyboard = {} 
-keyboard.inline_keyboard = {
-{{text = '𝚍𝚎𝚟 𝚊𝚕𝚖𝚊𝚐𝚔',url="t.me/M_A_G_K"},{text = '𝚍𝚎𝚟 𝚖𝚊𝚛𝚝𝚎𝚗', url="t.me/I_C_X"}},
-{{text = '𝚍𝚎𝚟 𝚎𝚕𝚔𝚊𝚋𝚘𝚘𝚜',url="t.me/G_W_P"}}, 
-{{text = '𝚝𝚠𝚊𝚜𝚘𝚘𝚕',url="t.me/TW_ROGEN_BOT"}}, 
-}
-local msg_id = msg.id_/2097152/0.5
-https.request("https://api.telegram.org/bot"..token..'/sendMessage?chat_id=' .. msg.chat_id_ .. '&text=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
-end
-end
-if text == "اسعار السورسات باكمل الحقوق" then
-if not DevSoFi(msg) then
-local Text = [[
- ◉ سعر السورس عند الكابوس و مارتن السورسات بتبدا من100لي 240ج سعر المصنع200 سعر السيرفر ،100,و 4 بي120, 8بي160 ❤️.
-]]
-keyboard = {} 
-keyboard.inline_keyboard = {
-{{text = '𝚍𝚎𝚟 𝚖𝚊𝚛𝚝𝚎𝚗', url="t.me/I_C_X"}},
-{{text = '𝚍𝚎𝚟 𝚎𝚕𝚔𝚊𝚋𝚘𝚘𝚜',url="t.me/G_W_P"}}, 
-}
-local msg_id = msg.id_/2097152/0.5
-https.request("https://api.telegram.org/bot"..token..'/sendMessage?chat_id=' .. msg.chat_id_ .. '&text=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
-end
-end
 if text == 'قسم الالعاب' then
 local Text = 'مرحب بيك في قسم الالعاب'
 local Key = {
 {'┄─━━━━𝗿𝗼𝗼𝗴𝗲𝗻━━━━─┄'},
-{'مطور','انا مين'},
+{'قسم مبرمجين السورس'},
+{'┄─━━━━𝗿𝗼𝗼𝗴𝗲𝗻━━━━─┄'},
+{'انا مين'},
 {'┄─━━━━𝗿𝗼𝗼𝗴𝗲𝗻━━━━─┄'},
 {'انصحنى','كتبات'},
 {'┄─━━━━𝗿𝗼𝗼𝗴𝗲𝗻━━━━─┄'},
+{'غنيلي'},
+{'┄─━━━━𝗿𝗼𝗼𝗴𝗲𝗻━━━━─┄'},
 {'صراحه','تويت'},
 {'┄─━━━━𝗿𝗼𝗼𝗴𝗲𝗻━━━━─┄'},
+{'المطور'},
+{'┄─━━━━𝗿𝗼𝗼𝗴𝗲𝗻━━━━─┄'},
 {'حروف','لو خيروك','نكته'},
+{'┄─━━━━𝗿𝗼𝗼𝗴𝗲𝗻━━━━─┄'},
 {'العوده'},
 }
 send_inline_key(msg.chat_id_,Text,Key)
@@ -1036,23 +1012,23 @@ if text == 'قسم المميزات' then
 local Text = 'مميزات خاصه بي الي متفل في بوتو اغاني فقط'
 local Key = {
 {'┄─━━━━𝗿𝗼𝗼𝗴𝗲𝗻━━━━─┄'},
-{'اغاني','مميزات'},
+{'اغاني','الالعاب'},
 {'┄─━━━━𝗿𝗼𝗼𝗴𝗲𝗻━━━━─┄'},
-{'الافلام','العاب'},
+{'استوري'},
 {'┄─━━━━𝗿𝗼𝗼𝗴𝗲𝗻━━━━─┄'},
-{'قران','روايات'},
-{'┄─━━━━𝗿𝗼𝗼𝗴𝗲𝗻━━━━─┄'},
-{'من سيربح المليون'},
+{'الافلام','روايات'},
 {'┄─━━━━𝗿𝗼𝗼𝗴𝗲𝗻━━━━─┄'},
 {'ثيم','الحوت الاسود'},
+{'┄─━━━━𝗿𝗼𝗼𝗴𝗲𝗻━━━━─┄'},
 {'العوده'},
 }
 send_inline_key(msg.chat_id_,Text,Key)
 end 
 
-if text == '  قسم مطورين السورس' then
-local Text = 'قسم مطورين السورس لدخول الي حسابتهم'
+if text == 'قسم مبرمجين السورس' then
+local Text = 'قسم مبرمجين السورس لدخول الي حسابتهم'
 local Key = {
+{'مبرمجين السورس'},
 {'قناة السورس','التواصل'},
 {'العوده'},
 }
@@ -1074,7 +1050,7 @@ end
 return false
 end
 if DevSoFi(msg) then
-local bl = '↑↓ مرحبا بك في سورس روجين قم بأختيار ماتريده من الازار في الاسفل ◉'
+local bl = ''◉ مرحبا بك في سورس روجين قم بأختيار ماتريده من الازار في الاسفل↑↓''
 local keyboard = {
 {'ضع اسم للبوت','معلومات الكيبورد'},
 {'المطور','الاحصائيات'},
@@ -1305,7 +1281,7 @@ https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. ms
 end
 
 if text == 'قسم السورس' and DevSoFi(msg) then 
-local Text = 'قسم مطورين السورس لدخول الي حسابتهم'
+local Text = 'قسم مبرمجين السورس لدخول الي حسابتهم'
 local Key = {
 {'مبرمجين السورس'},
 {'قناة السورس','التواصل'},
@@ -1527,10 +1503,11 @@ end
 if text == 'قناه السورس' and DevSoFi(msg) then
 database:del(bot_id..'Srt:Bot') 
 local Text = [[ 
- ✧ من أحسن السورسات على التليجرام سورس روجين ✧
-بجد سورس أمان جدا وفي مميزات جامده
-تع نصب بوتك عندنا لو محظور
-خش على تواصل هيدخلك لروم التواصل 
+[☆ 𝚠𝚎𝚕𝚌𝚘𝚖 𝚝𝚘 𝚛𝚘𝚘𝚐𝚎𝚗](t.me/SO_ROGEN)
+
+[☆ 𝚝𝚑𝚎 𝚋𝚎𝚜𝚝 𝚘𝚗 𝚜𝚘𝚞𝚛𝚌𝚎 𝚝𝚎𝚕𝚎](t.me/SO_ROGEN)
+
+[☆ 𝚏𝚘𝚕𝚕𝚘𝚠 𝚝𝚑𝚎 𝚋𝚞𝚝𝚝𝚘𝚗𝚜 𝚋𝚎𝚕𝚘𝚠](t.me/SO_ROGEN)
 ]] 
 keyboard = {}  
 keyboard.inline_keyboard = { 
@@ -13176,7 +13153,7 @@ end
 
 if text == 'رتبتي' then
 local rtp = Rutba(msg.sender_user_id_,msg.chat_id_)
-send(msg.chat_id_, msg.id_,' رتبتك    '..rtp..'    🌚\n  √') 
+send(msg.chat_id_, msg.id_,'رتبتك'..rtp..' ❤️🌚\n'') 
 end
 if text == "تفعيل انا مين"  then
 if Constructor(msg) then  
@@ -13325,7 +13302,24 @@ end
 send(msg.chat_id_,msg.id_, 'لا متحوارش انا شغال..🙂😹') 
 return false
 end
-
+if text == 'البوت مات' then 
+local my_ph = database:get(bot_id.."my_GHoeq2:status"..msg.chat_id_)
+if not my_ph then
+send(msg.chat_id_, msg.id_,"  ") 
+return false  
+end
+send(msg.chat_id_,msg.id_, 'تؤ انا بوت قمد مش بموت 🙂😹') 
+return false
+end
+if text == 'ده بوت' then 
+local my_ph = database:get(bot_id.."my_GHoeq2:status"..msg.chat_id_)
+if not my_ph then
+send(msg.chat_id_, msg.id_,"  ") 
+return false  
+end
+send(msg.chat_id_,msg.id_, 'ايده هو مفكرني بنادم بمتت..🙂😹') 
+return false
+end
 if text == 'سلام' then 
 local my_ph = database:get(bot_id.."my_GHoeq2:status"..msg.chat_id_)
 if not my_ph then
@@ -13506,7 +13500,7 @@ if not my_ph then
 send(msg.chat_id_, msg.id_,"  ") 
 return false  
 end
-send(msg.chat_id_,msg.id_, '[انا اجمد ..😊??](t.me/SO_ROGEN)')
+send(msg.chat_id_,msg.id_, '[انا اجمد ..😊❤](t.me/SO_ROGEN)')
 return false
 end
 end
@@ -13520,7 +13514,7 @@ if not my_ph then
 send(msg.chat_id_, msg.id_,"  ") 
 return false  
 end
-send(msg.chat_id_,msg.id_, '[الود كبر وبقي عندو بنت ..😻💥](t.me/SO_ROGEN)')
+send(msg.chat_id_,msg.id_, '[الود كبر وبقي عندو بنت ..😩❤️](t.me/SO_ROGEN)')
 return false
 end
 end
@@ -13534,13 +13528,13 @@ if not my_ph then
 send(msg.chat_id_, msg.id_,"  ") 
 return false  
 end
-send(msg.chat_id_,msg.id_, '[عندو كام سنه ..😹💥](t.me/SO_ROGEN)')
+send(msg.chat_id_,msg.id_, '[عندو كام سنه ..😹❤](t.me/SO_ROGEN)')
 return false
 end
 end
 end
 if text then 
-list = {'  '}
+list = {'مين الهقر'}
 for k,v in pairs(list) do
 if string.find(text,v) ~= nil then
 local my_ph = database:get(bot_id.."my_GHoeq2:status"..msg.chat_id_)
@@ -13548,21 +13542,7 @@ if not my_ph then
 send(msg.chat_id_, msg.id_,"  ") 
 return false  
 end
-send(msg.chat_id_,msg.id_, '[القمر مهو بيضكك اهوه ..🌚💕](t.me/SO_ROGEN)')
-return false
-end
-end
-end
-if text then 
-list = {'  '}
-for k,v in pairs(list) do
-if string.find(text,v) ~= nil then
-local my_ph = database:get(bot_id.."my_GHoeq2:status"..msg.chat_id_)
-if not my_ph then
-send(msg.chat_id_, msg.id_,"  ") 
-return false  
-end
-send(msg.chat_id_,msg.id_, '[القمر مهو بيضكك اهوه ..🌚💕](t.me/SO_ROGEN)')
+send(msg.chat_id_,msg.id_, '[مارتن والكابوس يرحي..🌚💕](t.me/SO_ROGEN)')
 return false
 end
 end
@@ -14884,9 +14864,9 @@ Msᴀɢ ~ #msgs
 [[
 ༻┉𖦹┉┉𖦹┉┉𖦹┉┉𖦹┉༺
 • |𝗜𝗗  ⁞ #id
-• |𝗨𝗦𝗘 ⁞ #username
+• |𝗨𝗦?? ⁞ #username
 • |𝗦𝗧𝗔  ⁞ #stast
-• |𝗠𝗦𝗚  ⁞ #edit
+• |𝗠𝗦??  ⁞ #edit
 • |𝗔𝗨𝗧𝗢 ⁞ #auto
 —————————————
 𝗖𝗛 -   @SO_ROGEN   ✧.
