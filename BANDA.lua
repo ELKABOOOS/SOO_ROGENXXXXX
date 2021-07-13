@@ -13153,7 +13153,7 @@ end
 
 if text == 'رتبتي' then
 local rtp = Rutba(msg.sender_user_id_,msg.chat_id_)
-send(msg.chat_id_, msg.id_,'رتبتك'..rtp..' ❤️🌚\n) 
+send(msg.chat_id_, msg.id_,' رتـبتـك ← '..rtp)
 end
 if text == "تفعيل انا مين"  then
 if Constructor(msg) then  
@@ -14105,7 +14105,7 @@ local sofia = {
 
 "صورتك عفنت غيرها بقي....🤓🧡",
 
-"اي يعم القمر دا ملاك يجدعان...🥺💕",
+"اي يعم القمر دا ملاك يجدعان...??💕",
 
 "اي الصوره المفنه دي يعم....😜",
 
@@ -16724,7 +16724,7 @@ local Teext =[[
  ✧اذاعه 
 ┄─━━━━𝗿𝗼𝗼𝗴𝗲𝗻━━━━─┄
 ❲المطور الاساسي+ المطور الثانوي❳
-┄─━━━━𝗿𝗼𝗼𝗴𝗲𝗻━━━━─┄
+┄─━━━━??𝗼𝗼𝗴𝗲𝗻━━━━─┄
  ✧تفعيل
  ✧تعطيل
  ✧مسح الاساسين
@@ -17182,7 +17182,7 @@ keyboard.inline_keyboard = {
 {{text = 'غنيلي', url="https://t.me/SO_ROGEN/24"}},
 {{text = 'نسبه جمالي', url="https://t.me/SO_ROGEN/28"},{text = 'اليتيوب', url="https://t.me/SO_ROGEN/29"}},
 {{text = 'القائمه الرائسيه', callback_data="/add"}},
-{{text = '𝚜𝚘𝚞????𝚎 𝚛𝚘𝚘𝚐𝚎𝚗', url="t.me/SO_ROGEN"}},
+{{text = '𝚜𝚘𝚞????𝚎 ??𝚘𝚘𝚐𝚎𝚗', url="t.me/SO_ROGEN"}},
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Teext)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
 end
