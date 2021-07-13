@@ -1344,7 +1344,7 @@ else
 tdcli_function ({ID = "GetUser",user_id_ = SUDO,},function(arg,result) 
 local function taha(extra, taha, success)
 if taha.photos_[0] then
-local Name = '〈 مــطـــور البــوتت〉 -\n['..result.first_name_..'](tg://user?id='..result.id_..')\n'
+local Name = '《 مــطـــور البــوتت 》\n['..result.first_name_..'](tg://user?id='..result.id_..')\n'
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
@@ -1401,18 +1401,7 @@ if text == 'الاصدار' and DevSoFi(msg) then
 database:del(bot_id..'Srt:Bot') 
 send(msg.chat_id_, msg.id_,' ✧ اصدار سورس روجين{ S:12✓}')
 end
-if text == 'مبرمجين السورس' then
-local Text = [[ 
-قناه مبرمجين السورس
-محتاج تنصب بوت حمايه ببلاش تواصل معانا✅
-]]
-keyboard = {}  
-keyboard.inline_keyboard = { 
-{{text = 'مبرمجين السورس', url="t.me/US_ROGEN"}}, 
-} 
-local msg_id = msg.id_/2097152/0.5 
-https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/US_ROGEN&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
-end
+
 if text == '┄─━━•⟮الركن الاخير⟯•━━─┄' and DevSoFi(msg) then
 local Text = [[ 
 [قناه سورس روجين ادخل وتابع الجديد](t.me/SO_ROGEN)
@@ -1474,31 +1463,19 @@ local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendmessage?chat_id=' .. msg.sender_user_id_ .. '&text=' ..token) 
 send(msg.chat_id_, msg.id_,' ') 
 end
-if text == 'الكابوس مبرمج السورس' and DevSoFi(msg) then
+if text == 'مبرمجين السورس' and DevSoFi(msg) then
 database:del(bot_id..'Srt:Bot') 
 local Text = [[ 
-  المبرمج الكابوس لو حابب تتواصل معاه
-اتبع الزر إلى تحت ↓  
+[مبرمجين سورس روجين لو حابب تتواصل معاه اتبع الازار الي تحت ⇊](t.me/SO_ROGEN)
 ]] 
 keyboard = {}  
 keyboard.inline_keyboard = { 
+{{text = '𝚍𝚎𝚟 𝚊𝚕𝚖𝚊𝚐𝚔', url="t.me/M_A_G_K"}}, {{text = '𝚍𝚎𝚟 𝚖𝚊𝚛𝚝𝚎𝚗', url="t.me/I_C_X"}}, 
 {{text = '𝚍𝚎𝚟 𝚎𝚕𝚔𝚊𝚋𝚘𝚘𝚜', url="t.me/G_W_P"}}, 
+{{text = '𝚜𝚘𝚞𝚛𝚌𝚎 𝚛𝚘𝚘𝚐𝚎𝚗', url="t.me/SO_ROGEN"}}, 
 } 
 local msg_id = msg.id_/2097152/0.5 
-https.request("https://api.telegram.org/bot"..token..'/sendMessage?chat_id=' .. msg.chat_id_ .. '&text=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
-end
-if text == 'مارتن مبرمج السورس' and DevSoFi(msg) then
-database:del(bot_id..'Srt:Bot') 
-local Text = [[ 
-  المبرمج مارتن لو حابب تتواصل معاه
-اتبع الزر إلى تحت ↓  
-]] 
-keyboard = {}  
-keyboard.inline_keyboard = { 
-{{text = '𝚍𝚎𝚟 𝚖𝚊𝚛𝚝𝚎𝚗', url="t.me/I_C_X"}}, 
-} 
-local msg_id = msg.id_/2097152/0.5 
-https.request("https://api.telegram.org/bot"..token..'/sendMessage?chat_id=' .. msg.chat_id_ .. '&text=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/ROOGEN1/18&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
 if text == 'قناه السورس' and DevSoFi(msg) then
 database:del(bot_id..'Srt:Bot') 
@@ -1516,7 +1493,39 @@ keyboard.inline_keyboard = {
 local msg_id = msg.id_/2097152/0.5 
 https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/ROOGEN1/18&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
-
+if text == 'الكابوس مبرمج السورس' then
+local Text = [[ 
+الكابوس مبرمج سورس روجين لوحابب تتواصل معاه ❤️.
+]]
+keyboard = {}  
+keyboard.inline_keyboard = { 
+{{text = '𝚍𝚎𝚟 𝚎𝚕𝚔𝚊𝚋𝚘𝚘𝚜', url="t.me/G_W_P"}}, 
+} 
+local msg_id = msg.id_/2097152/0.5 
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/G_W_P&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+end
+if text == 'مارتن مبرمج السورس' then
+local Text = [[ 
+مارتن مبرمج سورس روجين لوحابب تتواصل معاه ❤️.
+]]
+keyboard = {}  
+keyboard.inline_keyboard = { 
+{{text = '𝚍𝚎𝚟 𝚖𝚊𝚛𝚝𝚎𝚗', url="t.me/I_C_X"}}, 
+} 
+local msg_id = msg.id_/2097152/0.5 
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/I_C_X&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+end
+if text == 'الماجيك مطور السورس' then
+local Text = [[ 
+الماجيك مطور سورس روجين لوحابب تتواصل معاه ❤️.
+]]
+keyboard = {}  
+keyboard.inline_keyboard = { 
+{{text = '𝚍𝚎𝚟 𝚊𝚕𝚖𝚊𝚐𝚔', url="t.me/M_A_G_K"}}, 
+} 
+local msg_id = msg.id_/2097152/0.5 
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/M_A_G_K&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+end
 if text == "ضع اسم للبوت" and DevSoFi(msg) then  
 database:setex(bot_id..'Set:Name:Bot'..msg.sender_user_id_,300,true) 
 send(msg.chat_id_, msg.id_," ✧ ارسل اليه الاسم الان ")
@@ -4002,21 +4011,10 @@ return false
 end
 if text == "ثيم" and not  database:get(bot_id.."sing:for:me"..msg.chat_id_) then 
 ght = math.random(1,25); 
-local Text ='اكتب ثيم وسيتم اختيار ثيم اخار' 
+local Text ='اكتب ثيم وسيتم اختيار ثيم اخر' 
 keyboard = {}  
 keyboard.inline_keyboard = { 
 {{text = 'ثيم اخر', callback_data="ثيم"}},
-{{text = 'اضف البوت الي مجموعتك' ,url="t.me/"..dofile("./kkkklInfo.lua").botUserName.."?startgroup=start"}}, 
-} 
-local msg_id = msg.id_/2097152/0.5 
-https.request("https://api.telegram.org/bot"..token..'/senddocument?chat_id=' .. msg.chat_id_ .. '&document=https://t.me/gitt89/'..ght..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
-end
-if text == 'ثيم' and not  database:get(bot_id.."sing:for:me"..msg.chat_id_) then 
-ght = math.random(1,25); 
-local Text ='اكتب ثيم وسيتم اختيار ثيم اخار' 
-keyboard = {}  
-keyboard.inline_keyboard = { 
-{{text = 'ثيم اخر', callback_data="/added"}},
 {{text = 'اضف البوت الي مجموعتك' ,url="t.me/"..dofile("./kkkklInfo.lua").botUserName.."?startgroup=start"}}, 
 } 
 local msg_id = msg.id_/2097152/0.5 
@@ -4262,7 +4260,7 @@ else
 tdcli_function ({ID = "GetUser",user_id_ = SUDO,},function(arg,result) 
 local function taha(extra, taha, success)
 if taha.photos_[0] then
-local Name = '〈 مــطـــور البــوتت〉 -  \n['..result.first_name_..'](tg://user?id='..result.id_..')\n'
+local Name = '《 مــطـــور البــوتت 》  \n['..result.first_name_..'](tg://user?id='..result.id_..')\n'
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
@@ -13153,7 +13151,7 @@ end
 
 if text == 'رتبتي' then
 local rtp = Rutba(msg.sender_user_id_,msg.chat_id_)
-send(msg.chat_id_, msg.id_,' رتـبتـك ← '..rtp)
+send(msg.chat_id_, msg.id_,' رتبتك ← '..rtp)
 end
 if text == "تفعيل انا مين"  then
 if Constructor(msg) then  
