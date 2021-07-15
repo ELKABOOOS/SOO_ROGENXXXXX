@@ -17059,7 +17059,7 @@ keyboard.inline_keyboard = {
 {{text = 'لعبه المختلف', url="https://t.me/ROOGEN1/39"},{text = 'لعبه السمايلات', url="https://t.me/ROOGEN1/42"}}, 
 {{text = 'لعبه التخمين', url="https://t.me/SO_ROGEN/10"},{text = 'لعبه العكس', url="https://t.me/ROOGEN1/41"}}, 
 {{text = 'لعبه الاسرع', url="https://t.me/ROOGEN1/40"},{text = 'لعبه الانكليزي', url="https://t.me/ROOGEN1/38"}}, 
-{{text = 'لعبه حزوره', url="https://t.me/ROOGEN1/35},{text = 'لعبه المعاني', url="https://t.me/ROOGEN1/37"}}, 
+{{text = 'لعبه حزوره', url="https://t.me/ROOGEN1/35"},{text = 'لعبه المعاني', url="https://t.me/ROOGEN1/37"}}, 
 {{text = 'لعبه الامثله', url="https://t.me/ROOGEN1/36"},{text = 'عقاب', url="https://t.me/ROOGEN1/34"}},
 {{text = 'مريم', url="https://t.me/ROOGEN1/45"}},
 {{text = 'القائمه الرائسيه', callback_data="/add"}},
